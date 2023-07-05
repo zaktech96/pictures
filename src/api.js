@@ -11,7 +11,8 @@ const searchPhoto = async (term) => {
     },
   });
 
-  return response.data.result; // here is returning the data object and then result array
+  return response.data.results; // here is returning the data object and then result array
+  // error as i didnt do results caused problem
 };
 
 export default searchPhoto;

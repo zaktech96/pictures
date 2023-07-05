@@ -1,3 +1,4 @@
+import "./searchbar.css";
 import { useState } from "react";
 
 function SearchBar({ onSubmit }) {
@@ -5,7 +6,7 @@ function SearchBar({ onSubmit }) {
   const handleFormSubmit = (event) => {
     event.preventDefault(); // this helps to prevent reloading process
 
-    onSubmit("trees"); //call what ever text user types in input
+    onSubmit("term"); //call what ever text user types in input
   };
 
   const handleChange = (event) => {
@@ -15,13 +16,16 @@ function SearchBar({ onSubmit }) {
   };
   return (
     <div>
-      <form onSubmit={handleFormSubmit}>
-        {/* shows event to form*/}
-        {/*  wrapping form around input, makes a submit event*/}
-        <input value={term} onChange={handleChange} />{" "}
-        {/* step 3get value from input */}
-        {/* step 5 pass state to input value prop */}
-      </form>
+      <div className="search-bar">
+        <form onSubmit={handleFormSubmit}>
+          <label>enter term</label>
+          {/* shows event to form*/}
+          {/*  wrapping form around input, makes a submit event*/}
+          <input value={term} onChange={handleChange} />{" "}
+          {/* step 3get value from input */}
+          {/* step 5 pass state to input value prop */}
+        </form>
+      </div>
     </div>
   );
 }
