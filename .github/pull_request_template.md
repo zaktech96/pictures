@@ -1,7 +1,6 @@
-# PR Description
+# Pull request Description
 
-
-# Checklist:
+# My Checklist:
 
 - [ ] My code follows the style guidelines of this project
 - [ ] I have added tests that prove my fix is effective or that my feature works
